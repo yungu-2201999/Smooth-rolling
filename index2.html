@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>smooth rolling</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .box {
+      width: 100vw;
+      height: 300vh;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <button id="btn">back top</button>
+  <script>
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    })  
+  </script>
+</body>
+
+</html>
